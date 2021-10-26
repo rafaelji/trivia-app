@@ -17,7 +17,7 @@ const Result = () => {
             key={index}
             dangerouslySetInnerHTML={{ __html: item.question }}
             className={answersResult[index] ? "correct" : "wrong"}
-          ></li>
+          />
         ))}
       </ul>
       <Link to={HOME}>PLAY AGAIN?</Link>
