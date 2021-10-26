@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import useHome from "./hook";
 import { QUIZ } from "../../config/routes";
-import "./style.css";
 
 const Home = () => {
   const { loading } = useHome();
