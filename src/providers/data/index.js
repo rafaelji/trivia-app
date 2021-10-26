@@ -1,8 +1,11 @@
 import { createContext, useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
+import { RESULT } from "../../config/routes";
 
 export const dataContext = createContext();
 
 const ProvideData = ({ children }) => {
+  const history = useHistory();
   const [answersResult, setAnswerResults] = useState([]);
   const [data, setData] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState({});
@@ -14,7 +17,7 @@ const ProvideData = ({ children }) => {
       return;
     }
 
-    // navega pra resultados
+    history.push(RESULT);
   };
 
   useEffect(() => {

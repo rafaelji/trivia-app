@@ -3,7 +3,7 @@ import { getData } from "../../services/Trivia";
 import useData from "../../hooks/data";
 
 const useHome = () => {
-  const { setData } = useData();
+  const { setData, setAnswerResults } = useData();
   const [loading, setLoading] = useState(false);
 
   const getQuizData = useCallback(async () => {
