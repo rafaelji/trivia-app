@@ -3,3 +3,17 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
+
+p {
+    font-size: 16pt;
+}
+
+.container {
+    padding: 0 1rem;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
