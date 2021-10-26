@@ -2,9 +2,16 @@
 
 This is a Trivia game made with ReactJs web app
 
+## Fulfill the API environment variable
+Set the address of the API `https://opentdb.com/api.php` on the REACT_APP_API_URL environment variable at file .env or create a .env.local and set the address there.
+
 ## Running in development
 
-In the project directory, you can run:
+In the project directory, please run:
+
+### `yarn install`
+
+Install the project dependency modules.\
 
 ### `yarn start`
 
