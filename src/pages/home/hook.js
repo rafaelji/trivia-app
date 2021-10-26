@@ -15,13 +15,13 @@ const useHome = () => {
     } catch (error) {
       console.log(error);
     }
-  }, []);
+  }, [setData]);
 
   useEffect(() => {
     setData([]);
     setAnswerResults([]);
     setCurrentQuestion({});
-  }, []);
+  }, [setAnswerResults, setCurrentQuestion, setData]);
 
   useEffect(() => {
     getQuizData();
