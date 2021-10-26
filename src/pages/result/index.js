@@ -4,16 +4,20 @@ import { HOME } from "../../config/routes";
 import "./style.css";
 
 const Result = () => {
-  const { answersResult, data } = useResult();
+  const { answersResult, data, score } = useResult();
 
   return (
     <div className="container">
       <h1>
-        You scored <br /> 3/10
+        You scored <br /> {score()}/10
       </h1>
       <ul>
         {data.map((item, index) => (
-          <li key={index} dangerouslySetInnerHTML={{ __html: item.question }} />
+          <li
+            key={index}
+            dangerouslySetInnerHTML={{ __html: item.question }}
+            className={answersResult[index] ? "correct" : "wrong"}
+          ></li>
         ))}
       </ul>
       <Link to={HOME}>PLAY AGAIN?</Link>
