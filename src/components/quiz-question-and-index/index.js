@@ -7,7 +7,7 @@ const QuizQuestionAndIndex = () => {
   return (
     <div className={"quiz-question-and-index-container"}>
       <div className={"quiz-question-container"}>
-        <p>{currentQuestion.question}</p>
+        <p dangerouslySetInnerHTML={{ __html: currentQuestion.question }} />
       </div>
       <div className={"quiz-index-container"}>
         {currentQuestion.index + 1} of 10
