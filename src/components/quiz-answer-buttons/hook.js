@@ -1,13 +1,19 @@
 import useData from "../../hooks/data";
 
 const useQuizAnswerButtons = () => {
-  const { nextQuestion, currentQuestion, total, setTotal } = useData();
+  const { nextQuestion, currentQuestion, setAnswerResults, answersResult } =
+    useData();
 
   const answerQuestion = (value) => {
+    const resultList = [...answersResult];
+
     if (value === JSON.parse(currentQuestion.correct_answer.toLowerCase())) {
-      setTotal(total + 1);
+      resultList.push(true);
+    } else {
+      resultList.push(false);
     }
 
+    setAnswerResults(resultList);
     nextQuestion();
   };
 

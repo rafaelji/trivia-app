@@ -3,7 +3,7 @@ import { createContext, useEffect, useState } from "react";
 export const dataContext = createContext();
 
 const ProvideData = ({ children }) => {
-  const [total, setTotal] = useState(0);
+  const [answersResult, setAnswerResults] = useState([]);
   const [data, setData] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState({});
 
@@ -23,7 +23,14 @@ const ProvideData = ({ children }) => {
 
   return (
     <dataContext.Provider
-      value={{ data, setData, currentQuestion, nextQuestion, setTotal, total }}
+      value={{
+        data,
+        setData,
+        currentQuestion,
+        nextQuestion,
+        setAnswerResults,
+        answersResult,
+      }}
     >
       {children}
     </dataContext.Provider>
