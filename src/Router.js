@@ -1,6 +1,7 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/home";
-import { HOME } from "./config/routes";
+import { GAME, HOME } from "./config/routes";
+import Game from "./pages/game";
 
 const Router = () => {
   return (
@@ -8,6 +9,9 @@ const Router = () => {
       <Switch>
         <Route exact path={HOME}>
           <Home />
+        </Route>
+        <Route path={GAME}>
+          <Game />
         </Route>
       </Switch>
     </BrowserRouter>
