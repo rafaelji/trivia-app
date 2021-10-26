@@ -24,3 +24,11 @@ a {
     justify-content: space-between;
     align-items: center;
 }
+
+button {
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    font-weight: bold;
+    margin: 1rem 1rem;
+}
