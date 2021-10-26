@@ -1,7 +1,7 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/home";
-import { GAME, HOME } from "./config/routes";
-import Game from "./pages/game";
+import { QUIZ, HOME } from "./config/routes";
+import Quiz from "./pages/quiz";
 
 const Router = () => {
   return (
@@ -10,8 +10,8 @@ const Router = () => {
         <Route exact path={HOME}>
           <Home />
         </Route>
-        <Route path={GAME}>
-          <Game />
+        <Route path={QUIZ}>
+          <Quiz />
         </Route>
       </Switch>
     </BrowserRouter>
