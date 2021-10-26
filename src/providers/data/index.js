@@ -33,6 +33,7 @@ const ProvideData = ({ children }) => {
         nextQuestion,
         setAnswerResults,
         answersResult,
+        setCurrentQuestion,
       }}
     >
       {children}
