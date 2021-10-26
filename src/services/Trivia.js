@@ -6,7 +6,7 @@ const getData = async () => {
   if (data.status === 200) {
     return data.data.results.map((result, index) => ({
       ...result,
-      index: index + 1,
+      index,
     }));
   }
 

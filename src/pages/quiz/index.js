@@ -1,25 +1,13 @@
-import "./style.css";
-import useData from "../../hooks/data";
-import QuizTitle from "../../components/quiz-title";
+import QuizCategory from "../../components/quiz-category";
+import QuizQuestionAndIndex from "../../components/quiz-question-and-index";
+import QuizAnswerButtons from "../../components/quiz-answer-buttons";
 
 const Quiz = () => {
-  const { currentQuestion } = useData();
-
   return (
     <div className={"container"}>
-      <QuizTitle title={currentQuestion.category} />
-      <div className={"quiz-question-and-index-container"}>
-        <div className={"quiz-question-container"}>
-          <p>{currentQuestion.question}</p>
-        </div>
-        <div className={"quiz-index-container"}>
-          {currentQuestion.index} of 10
-        </div>
-      </div>
-      <div className={"quiz-button-container"}>
-        <button>True</button>
-        <button>False</button>
-      </div>
+      <QuizCategory />
+      <QuizQuestionAndIndex />
+      <QuizAnswerButtons />
     </div>
   );
 };
